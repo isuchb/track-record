@@ -1,0 +1,70 @@
+{
+  "version": "shield_v1",
+  "frozen_at_utc": "2026-04-28T12:00:00Z",
+  "model_file": "TQC_Shield_latest.zip",
+  "model_sha256": "319dd27c712d2a66cc67db60aedd08b7d0078258dc9004d421a89ba418ee0051",
+  "model_size_bytes": 29974181,
+  "vecnormalize_file": "vecnorm_Shield_latest.pkl",
+  "vecnormalize_sha256": "fdac8be6366b319517bbc85f644ab5568ece2d01f609c5af637f9edf9eec4532",
+  "vecnormalize_size_bytes": 400333,
+  "training_data_period": "2018-01-01 to <CONFIRM_WITH_USER>",
+  "validation_methodology": "CPCV with purge=21d and embargo=20d, 6 groups, 2 test groups, rolling 4-year window, 15 OOS combinations",
+  "universe": [
+    "TLT",
+    "IEF",
+    "SHV",
+    "HYG",
+    "LQD",
+    "MUB",
+    "TIP",
+    "GLD",
+    "SLV",
+    "GDX",
+    "DBC",
+    "USO",
+    "DBA",
+    "UUP",
+    "FXF",
+    "FXY",
+    "FXE",
+    "XLP",
+    "XLU",
+    "XLV",
+    "USMV",
+    "SPY",
+    "QQQ",
+    "BNO",
+    "CPER"
+  ],
+  "rebalance_frequency": "daily",
+  "execution_time_et": "15:30",
+  "hyperparameters_public": {
+    "algorithm": "TQC (Truncated Quantile Critics)",
+    "n_critics": 5,
+    "n_quantiles": 25,
+    "top_quantiles_dropped_per_net": 2,
+    "net_arch": [
+      256,
+      256
+    ],
+    "frame_stack": 15,
+    "gamma": 0.98,
+    "learning_rate": 3e-05,
+    "batch_size": 512,
+    "feature_extractors": [
+      "Conv1D",
+      "Transformer",
+      "CAAN (d_per_stock=8)",
+      "MacroAttention (macro_dim=64)"
+    ]
+  },
+  "risk_management_layers": [
+    "CBF-QP (Control Barrier Function via Quadratic Programming)",
+    "BOCPD (Bayesian Online Changepoint Detection)",
+    "RCPO (Reward Constrained Policy Optimization)",
+    "ALM (Augmented Lagrangian Method)",
+    "Vol-targeting (dual EWMA 20/60)",
+    "TQC truncation annealing",
+    "Drawdown-aware reward shaping"
+  ]
+}

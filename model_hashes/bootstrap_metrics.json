@@ -1,0 +1,54 @@
+{
+  "methodology": "Stationary Block Bootstrap (Politis & Romano 1994)",
+  "n_resamples": 10000,
+  "block_length_param_p": 0.490813,
+  "estimated_mean_block_length": 2.0374,
+  "lag1_autocorr_r_squared": 0.0184,
+  "input_series_length": 138,
+  "input_period": "1 to 138",
+  "risk_free_rate_annual": 0.04,
+  "seed": 42,
+  "metrics": {
+    "sharpe": {
+      "deterministic_path": 2.3395,
+      "median": 2.3728,
+      "ci_95_low": -0.3689,
+      "ci_95_high": 5.4912,
+      "std": 1.5028
+    },
+    "sortino": {
+      "deterministic_path": 2.8011,
+      "median": 2.9502,
+      "ci_95_low": -0.4242,
+      "ci_95_high": 8.857,
+      "std": 2.3775
+    },
+    "max_drawdown_pct": {
+      "deterministic_path": 4.2747,
+      "median": 4.576,
+      "ci_95_low": 2.0347,
+      "ci_95_high": 10.3191,
+      "std": 2.1061
+    },
+    "calmar": {
+      "deterministic_path": 7.3394,
+      "median": 6.7885,
+      "ci_95_low": -0.1177,
+      "ci_95_high": 29.3732,
+      "std": 7.7708
+    },
+    "total_return_pct": {
+      "deterministic_path": 16.1174,
+      "median": 16.1435,
+      "ci_95_low": -0.5791,
+      "ci_95_high": 34.0534,
+      "std": 8.7836
+    }
+  },
+  "interpretation_notes": [
+    "The deterministic_path metric is the original (single-run) value.",
+    "The median and CI95 are derived from stationary block bootstrap resamples.",
+    "Block length calibrated from lag-1 autocorrelation of squared returns to preserve volatility clustering.",
+    "Stationary Block Bootstrap (Politis & Romano 1994): block lengths are geometrically distributed with mean 1/p, ensuring stationarity of the resampled series -- unlike fixed-block bootstrap which can produce non-stationary boundary effects."
+  ]
+}
