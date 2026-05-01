@@ -53,7 +53,7 @@ A subscriber retains full responsibility for evaluating whether and how to act o
 
 ## Contact
 
-Reach out at [contact@the-bou.com](mailto:contact@the-bou.com). <!-- CHANGE_ME_ON_REBRAND -->
+Reach out at [admin@the-bou.com](mailto:contact@the-bou.com). <!-- CHANGE_ME_ON_REBRAND -->
 
 ## Disclaimer
 
