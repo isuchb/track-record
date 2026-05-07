@@ -6,11 +6,11 @@
 > with the model frozen on the date indicated below. They do not represent
 > actual capital deployment. Simulated past performance is not a reliable
 > indicator of future results. All returns are presented **net of modeled
-> trading costs** (10 bps buy + 10 bps sell + Almgren-Chriss non-linear market
-> impact + $0.01 fixed fee per trade) and gross of any subscription fees,
-> taxes, or platform charges. This material is intended for sophisticated
-> readers capable of independently evaluating its limitations and is not a
-> solicitation for any investment service.
+> trading costs** (spread, modeled non-linear market impact, and a fixed
+> per-trade fee) and gross of any subscription fees, taxes, or platform
+> charges. This material is intended for sophisticated readers capable of
+> independently evaluating its limitations and is not a solicitation for any
+> investment service.
 
 This repository is the public, append-only research log for Shield v1, a frozen quantitative model that publishes daily portfolio weights before market execution. Every daily prediction is committed to this repository with a cryptographic timestamp before the corresponding orders are sent to the broker, so the entire history is independently auditable. The model itself is frozen — its checkpoint hash is published in [`model_hashes/shield_v1.json`](model_hashes/shield_v1.json) and any future change requires a new version (see [`methodology/version_policy.md`](methodology/version_policy.md)).
 
@@ -26,7 +26,7 @@ A visual view of the equity curve, metrics, and historical signals is available 
 
 ## Model identity
 
-See [`SHIELD_V1_FROZEN.md`](SHIELD_V1_FROZEN.md) for the full description of what Shield v1 is, the universe it trades, and the public hyperparameters.
+See [`SHIELD_V1_FROZEN.md`](SHIELD_V1_FROZEN.md) for the public description of what Shield v1 is and the universe it trades. Detailed algorithmic methodology, hyperparameters, exact validation metrics with confidence intervals, and risk-layer specifications are shared with verified institutional contacts on request via [the-bou.com](https://the-bou.com).
 
 ## Versioning policy
 

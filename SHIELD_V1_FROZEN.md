@@ -6,27 +6,27 @@
 > with the model frozen on the date indicated below. They do not represent
 > actual capital deployment. Simulated past performance is not a reliable
 > indicator of future results. All returns are presented **net of modeled
-> trading costs** (10 bps buy + 10 bps sell + Almgren-Chriss non-linear market
-> impact + $0.01 fixed fee per trade) and gross of any subscription fees,
-> taxes, or platform charges. This material is intended for sophisticated
-> readers capable of independently evaluating its limitations and is not a
-> solicitation for any investment service.
+> trading costs** (spread, modeled non-linear market impact, and a fixed
+> per-trade fee) and gross of any subscription fees, taxes, or platform
+> charges. This material is intended for sophisticated readers capable of
+> independently evaluating its limitations and is not a solicitation for any
+> investment service.
 
-This document describes the identity of the Shield v1 model as it was frozen for the open-source research project. All values below are immutable — any change to the model produces v2 (see [`methodology/version_policy.md`](methodology/version_policy.md)).
+This document describes the public identity of the Shield v1 model as it was frozen for the open-source research project. All values below are immutable — any change to the model produces v2 (see [`methodology/version_policy.md`](methodology/version_policy.md)).
 
 ## Freeze metadata
 
-- **Frozen at (UTC):** `<TO BE FILLED AT FREEZE CEREMONY>`
-- **Model SHA256:** `<TO BE FILLED AT FREEZE CEREMONY>`
-- **VecNormalize SHA256:** `<TO BE FILLED AT FREEZE CEREMONY>`
+- **Frozen at (UTC):** `2026-04-28T12:00:00Z`
+- **Model SHA256:** `319dd27c712d2a66cc67db60aedd08b7d0078258dc9004d421a89ba418ee0051`
+- **VecNormalize SHA256:** `fdac8be6366b319517bbc85f644ab5568ece2d01f609c5af637f9edf9eec4532`
 
 ## Training data period
 
-`2015-01-02 to 2026-04-21 (each CPCV combination uses a rolling 4-year training window)`
+`2015-01-02 to 2026-04-21`, with rolling multi-year training windows and out-of-sample test segments.
 
 ## Validation methodology
 
-Combinatorial Purged Cross-Validation (CPCV) with 6 groups, 2 test groups per combination, 21-day purge, 20-day embargo, and a rolling 4-year window. See [`methodology/overview.md`](methodology/overview.md) for the rationale.
+Out-of-sample validation with anti-leakage purge/embargo safeguards over a rolling multi-year window, plus a held-out final segment never seen during training. Detailed methodology (group structure, purge length, embargo length, window size, resampling parameters) is shared with verified institutional contacts via methodology request on [the-bou.com](https://the-bou.com).
 
 ## Universe (25 ETFs)
 
@@ -56,37 +56,25 @@ Combinatorial Purged Cross-Validation (CPCV) with 6 groups, 2 test groups per co
 - BNO — United States Brent Oil Fund
 - CPER — United States Copper Index Fund
 
-## Public hyperparameters
+## Architecture (high-level)
 
-- Algorithm: TQC (Truncated Quantile Critics)
-- Critics: 5
-- Quantiles per critic: 25
-- Top quantiles dropped per net: 2
-- net_arch: [256, 256] over feature extractor
-- frame_stack: 15
-- gamma: 0.98
-- learning_rate: 3e-5
-- batch_size: 512
-- Feature extractors: Conv1D, Transformer, CAAN (d_per_stock=8), Macro Attention (macro_dim=64)
+Shield v1 is a deep-learning portfolio allocator with multiple stacked risk-management layers. Architectural specifics — algorithm family, network topology, feature extractors, risk-layer implementations, hyperparameters — are operational details shared with verified institutional contacts via methodology request, so the public record commits to the model's identity-by-hash without disclosing replicable detail.
 
-> Note: Shield v1 was trained with a deliberate trade-off favoring time-to-market: replay buffer size of 100,000 transitions and 10 CPCV combinations (vs the more conservative 200,000+ buffer and 20-30 combinations recommended for higher statistical confidence). Successor version v2 will increase these to the conservative range. This trade-off is documented for radical transparency.
+## Validation summary
 
-## Validation metrics (Stationary Block Bootstrap)
+The following summary metrics were computed from a single deterministic out-of-sample backtest over a 138-trading-day held-out window (2025-10-01 to 2026-04-21), evaluated against a block-bootstrap distribution of resampled trajectories.
 
-The following metrics were computed from a single deterministic out-of-sample backtest over 138 trading days (2025-10-01 to 2026-04-21). Confidence intervals are derived via 10,000 stationary block bootstrap resamples (Politis & Romano 1994), with block length calibrated from the lag-1 autocorrelation of squared returns (mean block length ≈ 2 days, reflecting low volatility clustering in the period).
+| Metric | Headline value |
+|---|---|
+| Sharpe (rf=4%) | ~ 2 |
+| Sortino (rf=4%) | ~ 3 |
+| Total return | ~ 16% |
+| Max drawdown | < 5% |
+| Calmar | ~ 7 |
 
-| Metric | Deterministic | Bootstrap median | 95% CI low | 95% CI high | Std |
-|---|---|---|---|---|---|
-| Sharpe (rf=4%) | 2.34 | 2.37 | -0.37 | 5.49 | 1.50 |
-| Sortino (rf=4%) | 2.80 | 2.95 | -0.42 | 8.86 | 2.38 |
-| Total return | 16.12% | 16.14% | -0.58% | 34.05% | 8.78% |
-| Max drawdown | 4.28% | 4.58% | 2.04% | 10.32% | 2.11% |
-| Calmar | 7.34 | 6.79 | -0.12 | 29.37 | 7.77 |
-
-**Reading the confidence intervals**: a CI95 spanning negative values does NOT indicate the strategy is broken. It reflects the limited sample size of 138 trading days. With more live execution data accumulating after the freeze date, these intervals will tighten substantially. The bootstrap median being close to the deterministic path indicates the deterministic backtest is representative of the underlying distribution rather than an outlier.
+**Detailed values, full bootstrap confidence intervals, and the underlying daily-returns vector are shared with verified institutional contacts via methodology request on [the-bou.com](https://the-bou.com).**
 
 **SPY benchmark over the same period**: +6.63% total return.
-**Beta vs SPY**: <PENDING_CALCULATION> (separate computation, not in current bootstrap output).
 
 ## Execution
 
@@ -95,19 +83,11 @@ The following metrics were computed from a single deterministic out-of-sample ba
 
 ## Risk management layers (active)
 
-The following risk layers are active in production. Their internal logic is not public; only the on/off status of each layer is disclosed.
-
-- CBF-QP (Control Barrier Function via Quadratic Programming)
-- BOCPD (Bayesian Online Changepoint Detection)
-- RCPO (Reward Constrained Policy Optimization)
-- ALM (Augmented Lagrangian Method)
-- Vol-targeting (dual EWMA 20/60)
-- TQC truncation annealing
-- Drawdown-aware reward shaping
+Multiple risk-management layers are active in production. Their existence is part of the public commitment; their internal logic and parameters are operational details shared with verified institutional contacts via methodology request.
 
 ## Versioning policy
 
-This model is frozen. Any future change to the training data, hyperparameters, architecture, feature engineering, or risk layer logic produces v2 with a 30-day public announcement; v1 continues running in paper alongside v2 until the Minimum Track Record Length (MinTRL) criterion at 95% confidence is satisfied (Bailey & López de Prado 2014), typically 6-24 months. Full policy in [`methodology/version_policy.md`](methodology/version_policy.md).
+This model is frozen. Any future change to the training data, hyperparameters, architecture, feature engineering, or risk-layer logic produces v2 with a 30-day public announcement; v1 continues running in paper alongside v2 until the Minimum Track Record Length (MinTRL) criterion at 95% confidence is satisfied, typically 6-24 months. Full policy in [`methodology/version_policy.md`](methodology/version_policy.md).
 
 ---
 

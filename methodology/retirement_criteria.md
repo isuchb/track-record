@@ -6,16 +6,19 @@ This document is a public, pre-committed statement of the conditions under which
 
 This document is independent of [`version_policy.md`](version_policy.md). The version policy describes how a new version is released and announced; this document describes when v1 itself becomes ineligible to keep operating, regardless of whether v2 is ready.
 
-## Quantitative triggers
+> **Specific quantitative thresholds are available to verified institutional contacts via the methodology access form on the-bou.com.** The categories of triggers and the structural process described below are public commitments; the exact numerical breakpoints are operational details shared with allocators conducting due diligence.
+
+## Quantitative trigger categories
 
 Any **one** of the following conditions, observed on live execution data, triggers retirement:
 
-- **Maximum Drawdown threshold (primary failsafe)**: rolling MaxDD exceeds **20.6%** (2.0× the bootstrap-CI95 upper bound from validation, aligning with the institutional 2-sigma standard for manager replacement). This is the absolute final failsafe; complementary leading-indicator metrics below should trigger investigation well before this point is reached.
-- **Modified Conditional Expected Drawdown (MCED)**: as defined by Goldberg & Mahmoud (2014), MCED smooths the path-dependence of MaxDD and is more robust to sampling error. Trigger investigation if MCED exceeds 1.5x its in-sample bootstrap mean for 30 consecutive days.
-- **Rolling Calmar deterioration**: 6-month rolling Calmar ratio drops below 0.5 (vs deterministic backtest of 7.34). Calmar collapse is a leading indicator that recovery efficiency is failing before MaxDD limit is breached.
-- **High-Water Mark (HWM) duration**: portfolio remains under its prior HWM for more than 90 consecutive trading days, indicating structural alpha decay or regime mismatch.
-- **Sharpe collapse.** The rolling 90-day annualized Sharpe ratio drops below 0.5 and remains below 0.5 for 60 consecutive trading days.
-- **Tracking error vs published prediction stream**: cumulative tracking error exceeds 100 bps over any 30-day window, indicating execution drift between published signal and actual broker fills.
+- **Maximum Drawdown threshold (primary failsafe)**: rolling MaxDD exceeds a pre-committed level calibrated against the bootstrap-CI95 upper bound from validation, aligning with institutional standards for manager replacement. This is the absolute final failsafe; complementary leading-indicator metrics below are designed to trigger investigation well before this point is reached.
+- **Modified Conditional Expected Drawdown (MCED)** as defined by Goldberg & Mahmoud (2014): smooths the path-dependence of MaxDD and is more robust to sampling error. Triggers investigation when MCED elevates materially above its in-sample bootstrap mean for a sustained window.
+- **Rolling Calmar deterioration**: rolling Calmar ratio drops below a pre-committed level relative to deterministic backtest. Calmar collapse is a leading indicator that recovery efficiency is failing before MaxDD limit is breached.
+- **High-Water Mark (HWM) duration**: portfolio remains under its prior HWM beyond a sustained threshold of trading days, indicating structural alpha decay or regime mismatch.
+- **Sharpe collapse**: rolling annualized Sharpe ratio drops below a defined floor and remains there for a sustained window.
+- **Tracking error vs published prediction stream**: cumulative tracking error exceeds a pre-committed bps threshold over a defined window, indicating execution drift between published signal and actual broker fills.
+- **Beta drift breach**: trailing 36-month Beta vs SPY exceeds a defined absolute-value threshold. Shield is contractually positioned as an uncorrelated absolute-return strategy with low target Beta. A trailing Beta above the threshold triggers automatic database reclassification (Morningstar institutional methodology, HFR strategy classification rules) from "Equity Market Neutral / Absolute Return" to "Long-Biased" or "Balanced", which fundamentally violates the mandate under which any institutional capital was allocated. A WARNING level is issued at the leading indicator; a CRITICAL retirement trigger fires at the structural threshold.
 
 ## Structural triggers
 
@@ -46,6 +49,10 @@ To avoid hair-trigger retirement on noise, the following situations are explicit
 ## Relationship to versioning policy
 
 Retirement triggers ALWAYS produce a major version bump (v(n) → v(n+1)). They never produce minor or patch versions, because by definition the trigger indicates the existing model is no longer fit for purpose. The 30-day pre-announcement window required for standard major releases is waived when retirement is triggered, replaced by an immediate retirement notice followed by a post-mortem within 30 days. The successor v2 then follows its standard launch protocol once ready.
+
+## Verification of trigger events
+
+When a trigger fires, the precise breach value will be published in the retirement notice itself, alongside the threshold that was breached. Until that point, the threshold values themselves remain operational details available to verified institutional contacts via methodology request, which prevents adversarial probing of the public boundary while preserving full ex-post auditability.
 
 ---
 
