@@ -1,0 +1,165 @@
+{
+  "content_sha256": "992bf3df2b19fb16c6a8c49b2546fc928d87d7d11e48bb4e9c0c78d4c4be8bab",
+  "date_utc": "2026-05-15",
+  "metadata": {
+    "dry_run": false,
+    "model_version": "shield_v1",
+    "orders": [
+      {
+        "delta_value": 287.19693062744136,
+        "qty": 0.3878,
+        "side": "sell",
+        "symbol": "SPY"
+      },
+      {
+        "delta_value": 80.78537143135074,
+        "qty": 1.4007,
+        "side": "sell",
+        "symbol": "BNO"
+      },
+      {
+        "delta_value": 80.39293753051754,
+        "qty": 0.1923,
+        "side": "sell",
+        "symbol": "GLD"
+      },
+      {
+        "delta_value": 58.55044630508429,
+        "qty": 0.6171,
+        "side": "sell",
+        "symbol": "USMV"
+      },
+      {
+        "delta_value": 58.270632940673856,
+        "qty": 0.5197,
+        "side": "sell",
+        "symbol": "FXF"
+      },
+      {
+        "delta_value": 46.63147714233399,
+        "qty": 0.423,
+        "side": "sell",
+        "symbol": "SHV"
+      },
+      {
+        "delta_value": 46.42680038452148,
+        "qty": 0.42,
+        "side": "sell",
+        "symbol": "TIP"
+      },
+      {
+        "delta_value": 43.197461260223314,
+        "qty": 1.3852,
+        "side": "sell",
+        "symbol": "DBC"
+      },
+      {
+        "delta_value": 42.220855475807255,
+        "qty": 1.5219,
+        "side": "sell",
+        "symbol": "UUP"
+      },
+      {
+        "delta_value": 21.928555969238225,
+        "qty": 0.2045,
+        "side": "sell",
+        "symbol": "FXE"
+      },
+      {
+        "delta_value": 21.019836196899448,
+        "qty": 0.2483,
+        "side": "sell",
+        "symbol": "XLP"
+      },
+      {
+        "delta_value": 20.62083289566037,
+        "qty": 0.2593,
+        "side": "sell",
+        "symbol": "HYG"
+      },
+      {
+        "delta_value": 10.309327255249038,
+        "qty": 0.0697,
+        "side": "sell",
+        "symbol": "USO"
+      },
+      {
+        "delta_value": 458.33636983642583,
+        "qty": 0.6446,
+        "side": "buy",
+        "symbol": "QQQ"
+      },
+      {
+        "delta_value": 145.30181783752445,
+        "qty": 2.0958,
+        "side": "buy",
+        "symbol": "SLV"
+      },
+      {
+        "delta_value": 113.70479999999996,
+        "qty": 1.2921,
+        "side": "buy",
+        "symbol": "GDX"
+      },
+      {
+        "delta_value": 47.64418137817377,
+        "qty": 0.5094,
+        "side": "buy",
+        "symbol": "IEF"
+      },
+      {
+        "delta_value": 25.65743320350648,
+        "qty": 0.9221,
+        "side": "buy",
+        "symbol": "DBA"
+      },
+      {
+        "delta_value": 18.33317686386101,
+        "qty": 0.4169,
+        "side": "buy",
+        "symbol": "XLU"
+      },
+      {
+        "delta_value": 11.377079833984311,
+        "qty": 0.136,
+        "side": "buy",
+        "symbol": "TLT"
+      }
+    ],
+    "portfolio": {
+      "cash": 3.5,
+      "n_positions": 25,
+      "total_value": 29650.026376724243
+    }
+  },
+  "model_sha256": "319dd27c712d2a66cc67db60aedd08b7d0078258dc9004d421a89ba418ee0051",
+  "model_version": "shield_v1",
+  "publication_time_utc": "2026-05-15T19:31:43.750788Z",
+  "weights": {
+    "BNO": 0.043960010830186205,
+    "CPER": 0.04020373010658962,
+    "DBA": 0.04028018952964127,
+    "DBC": 0.04166568462212941,
+    "FXE": 0.03904207799672135,
+    "FXF": 0.03963194835704483,
+    "FXY": 0.03931592926570331,
+    "GDX": 0.03945025412602988,
+    "GLD": 0.03958851471334585,
+    "HYG": 0.0422184981223376,
+    "IEF": 0.0394604116867215,
+    "LQD": 0.03985032518461522,
+    "MUB": 0.039108220141511246,
+    "QQQ": 0.03943911680531848,
+    "SHV": 0.03932551470375565,
+    "SLV": 0.039974723717150204,
+    "SPY": 0.040268322752564784,
+    "TIP": 0.03944377245329565,
+    "TLT": 0.039883365267033864,
+    "USMV": 0.039625082885373426,
+    "USO": 0.0395605879770158,
+    "UUP": 0.03974488059835084,
+    "XLP": 0.03926292448701798,
+    "XLU": 0.040663034929095496,
+    "XLV": 0.03903287874145053
+  }
+}
