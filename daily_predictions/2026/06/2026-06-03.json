@@ -1,0 +1,183 @@
+{
+  "content_sha256": "d7903fdf2a558e3d9ae84e7e3909db25f2ade76a47afb2553d9f48b46c656a1f",
+  "date_utc": "2026-06-03",
+  "metadata": {
+    "dry_run": false,
+    "model_version": "shield_v1",
+    "orders": [
+      {
+        "delta_value": 327.3085749267578,
+        "qty": 0.4396,
+        "side": "sell",
+        "symbol": "QQQ"
+      },
+      {
+        "delta_value": 102.42657344970704,
+        "qty": 0.7271,
+        "side": "sell",
+        "symbol": "USO"
+      },
+      {
+        "delta_value": 59.48003773803707,
+        "qty": 0.6328,
+        "side": "sell",
+        "symbol": "IEF"
+      },
+      {
+        "delta_value": 53.86867382812501,
+        "qty": 0.9984,
+        "side": "sell",
+        "symbol": "BNO"
+      },
+      {
+        "delta_value": 52.398128082275484,
+        "qty": 0.476,
+        "side": "sell",
+        "symbol": "SHV"
+      },
+      {
+        "delta_value": 45.67056152343754,
+        "qty": 0.416,
+        "side": "sell",
+        "symbol": "TIP"
+      },
+      {
+        "delta_value": 31.579121725463892,
+        "qty": 0.3962,
+        "side": "sell",
+        "symbol": "HYG"
+      },
+      {
+        "delta_value": 31.57398243408203,
+        "qty": 0.2138,
+        "side": "sell",
+        "symbol": "XLV"
+      },
+      {
+        "delta_value": 28.29851846466066,
+        "qty": 0.6462,
+        "side": "sell",
+        "symbol": "XLU"
+      },
+      {
+        "delta_value": 27.360643275261012,
+        "qty": 0.9819,
+        "side": "sell",
+        "symbol": "UUP"
+      },
+      {
+        "delta_value": 26.375103451538173,
+        "qty": 0.2466,
+        "side": "sell",
+        "symbol": "FXE"
+      },
+      {
+        "delta_value": 25.193685359191925,
+        "qty": 0.2354,
+        "side": "sell",
+        "symbol": "MUB"
+      },
+      {
+        "delta_value": 23.22057469768528,
+        "qty": 0.8637,
+        "side": "sell",
+        "symbol": "DBA"
+      },
+      {
+        "delta_value": 21.042599913787814,
+        "qty": 0.1937,
+        "side": "sell",
+        "symbol": "LQD"
+      },
+      {
+        "delta_value": 19.21696308746344,
+        "qty": 0.2253,
+        "side": "sell",
+        "symbol": "TLT"
+      },
+      {
+        "delta_value": 17.212048412322975,
+        "qty": 0.2593,
+        "side": "sell",
+        "symbol": "SLV"
+      },
+      {
+        "delta_value": 15.085829151916444,
+        "qty": 0.4978,
+        "side": "sell",
+        "symbol": "DBC"
+      },
+      {
+        "delta_value": 431.4493946044923,
+        "qty": 0.5716,
+        "side": "buy",
+        "symbol": "SPY"
+      },
+      {
+        "delta_value": 349.3925389709473,
+        "qty": 0.8555,
+        "side": "buy",
+        "symbol": "GLD"
+      },
+      {
+        "delta_value": 54.05804624557496,
+        "qty": 0.4855,
+        "side": "buy",
+        "symbol": "FXF"
+      },
+      {
+        "delta_value": 46.2993985061646,
+        "qty": 0.5394,
+        "side": "buy",
+        "symbol": "GDX"
+      },
+      {
+        "delta_value": 10.899350318908764,
+        "qty": 0.19,
+        "side": "buy",
+        "symbol": "FXY"
+      },
+      {
+        "delta_value": 10.268729804992722,
+        "qty": 0.1065,
+        "side": "buy",
+        "symbol": "USMV"
+      }
+    ],
+    "portfolio": {
+      "cash": 0.32,
+      "n_positions": 25,
+      "total_value": 29458.738704986572
+    }
+  },
+  "model_sha256": "319dd27c712d2a66cc67db60aedd08b7d0078258dc9004d421a89ba418ee0051",
+  "model_version": "shield_v1",
+  "publication_time_utc": "2026-06-03T19:31:34.968902Z",
+  "weights": {
+    "BNO": 0.04396001051580474,
+    "CPER": 0.04020372981907132,
+    "DBA": 0.04028018924157616,
+    "DBC": 0.04166568432415589,
+    "FXE": 0.03904207771751064,
+    "FXF": 0.039631950457459965,
+    "FXY": 0.03931592898453415,
+    "GDX": 0.039450253843900086,
+    "GLD": 0.03958851443022729,
+    "HYG": 0.04221849782041062,
+    "IEF": 0.039460411404519065,
+    "LQD": 0.039850324899624305,
+    "MUB": 0.03910821986182752,
+    "QQQ": 0.03943911652326834,
+    "SHV": 0.039325516806362246,
+    "SLV": 0.03997472343126965,
+    "SPY": 0.04026832246458455,
+    "TIP": 0.03944377455505653,
+    "TLT": 0.03988336259796235,
+    "USMV": 0.039625082601993336,
+    "USO": 0.039560587694096955,
+    "UUP": 0.03974488269795833,
+    "XLP": 0.03926292420622788,
+    "XLU": 0.04066303463829246,
+    "XLV": 0.03903287846230561
+  }
+}
