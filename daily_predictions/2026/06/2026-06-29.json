@@ -1,0 +1,165 @@
+{
+  "content_sha256": "dfa81282c80433b1c3cd8617ba8a99897571c2a8d8793513a1c3409203a4e12e",
+  "date_utc": "2026-06-29",
+  "metadata": {
+    "dry_run": false,
+    "model_version": "shield_v1",
+    "orders": [
+      {
+        "delta_value": 337.47201865234376,
+        "qty": 0.4556,
+        "side": "sell",
+        "symbol": "SPY"
+      },
+      {
+        "delta_value": 74.42127084350582,
+        "qty": 0.6785,
+        "side": "sell",
+        "symbol": "LQD"
+      },
+      {
+        "delta_value": 52.01749248046867,
+        "qty": 0.4866,
+        "side": "sell",
+        "symbol": "USO"
+      },
+      {
+        "delta_value": 50.69555317382816,
+        "qty": 0.4808,
+        "side": "sell",
+        "symbol": "FXE"
+      },
+      {
+        "delta_value": 27.96712582244879,
+        "qty": 0.2909,
+        "side": "sell",
+        "symbol": "USMV"
+      },
+      {
+        "delta_value": 19.21306491851802,
+        "qty": 0.2022,
+        "side": "sell",
+        "symbol": "IEF"
+      },
+      {
+        "delta_value": 16.087071672058155,
+        "qty": 0.1001,
+        "side": "sell",
+        "symbol": "XLV"
+      },
+      {
+        "delta_value": 14.854765777587884,
+        "qty": 0.3644,
+        "side": "sell",
+        "symbol": "BNO"
+      },
+      {
+        "delta_value": 13.107305364990301,
+        "qty": 0.1734,
+        "side": "sell",
+        "symbol": "GDX"
+      },
+      {
+        "delta_value": 12.447278643035858,
+        "qty": 0.3342,
+        "side": "sell",
+        "symbol": "CPER"
+      },
+      {
+        "delta_value": 397.1475677246093,
+        "qty": 0.5491,
+        "side": "buy",
+        "symbol": "QQQ"
+      },
+      {
+        "delta_value": 40.67111032867432,
+        "qty": 0.718,
+        "side": "buy",
+        "symbol": "FXY"
+      },
+      {
+        "delta_value": 34.605122129058834,
+        "qty": 0.3171,
+        "side": "buy",
+        "symbol": "FXF"
+      },
+      {
+        "delta_value": 33.87652471160896,
+        "qty": 0.3145,
+        "side": "buy",
+        "symbol": "MUB"
+      },
+      {
+        "delta_value": 28.316009754180858,
+        "qty": 0.537,
+        "side": "buy",
+        "symbol": "SLV"
+      },
+      {
+        "delta_value": 22.014942672729507,
+        "qty": 0.2004,
+        "side": "buy",
+        "symbol": "TIP"
+      },
+      {
+        "delta_value": 19.523880706787132,
+        "qty": 0.2316,
+        "side": "buy",
+        "symbol": "XLP"
+      },
+      {
+        "delta_value": 18.618845123291013,
+        "qty": 0.0505,
+        "side": "buy",
+        "symbol": "GLD"
+      },
+      {
+        "delta_value": 15.261158675384522,
+        "qty": 0.5747,
+        "side": "buy",
+        "symbol": "DBC"
+      },
+      {
+        "delta_value": 13.803521134185765,
+        "qty": 0.1251,
+        "side": "buy",
+        "symbol": "SHV"
+      }
+    ],
+    "portfolio": {
+      "cash": 5.09,
+      "n_positions": 25,
+      "total_value": 28409.034107055664
+    }
+  },
+  "model_sha256": "319dd27c712d2a66cc67db60aedd08b7d0078258dc9004d421a89ba418ee0051",
+  "model_version": "shield_v1",
+  "publication_time_utc": "2026-06-29T19:31:36.914010Z",
+  "weights": {
+    "BNO": 0.043960010620598566,
+    "CPER": 0.04020372991491075,
+    "DBA": 0.04028018933759787,
+    "DBC": 0.0416656844234804,
+    "FXE": 0.03904207781058088,
+    "FXF": 0.03963194816809204,
+    "FXY": 0.0393159290782572,
+    "GDX": 0.03945025632178767,
+    "GLD": 0.03958851452460014,
+    "HYG": 0.04221849315336431,
+    "IEF": 0.03946041149858654,
+    "LQD": 0.039850324994621274,
+    "MUB": 0.03910821995505543,
+    "QQQ": 0.03943911661728505,
+    "SHV": 0.03932551690010816,
+    "SLV": 0.03997472352656317,
+    "SPY": 0.04026832256057796,
+    "TIP": 0.03944377464908435,
+    "TLT": 0.0398833650768824,
+    "USMV": 0.039625082696453366,
+    "USO": 0.03956058778840324,
+    "UUP": 0.03974488279270394,
+    "XLP": 0.03926292429982458,
+    "XLU": 0.040663034735226804,
+    "XLV": 0.039032878555353916
+  }
+}
