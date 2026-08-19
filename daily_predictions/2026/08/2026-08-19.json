@@ -1,0 +1,165 @@
+{
+  "content_sha256": "f3939e8b995e3eab54ae49ee28de316b17bd173dc74ccd8988346634ad66b864",
+  "date_utc": "2026-08-19",
+  "metadata": {
+    "dry_run": false,
+    "model_version": "shield_v1",
+    "orders": [
+      {
+        "delta_value": 237.01243193359377,
+        "qty": 0.3304,
+        "side": "sell",
+        "symbol": "QQQ"
+      },
+      {
+        "delta_value": 62.361457177734394,
+        "qty": 0.6432,
+        "side": "sell",
+        "symbol": "GDX"
+      },
+      {
+        "delta_value": 46.331579528808504,
+        "qty": 0.772,
+        "side": "sell",
+        "symbol": "SLV"
+      },
+      {
+        "delta_value": 45.47093273620612,
+        "qty": 0.2586,
+        "side": "sell",
+        "symbol": "XLV"
+      },
+      {
+        "delta_value": 38.07874612426752,
+        "qty": 0.0921,
+        "side": "sell",
+        "symbol": "GLD"
+      },
+      {
+        "delta_value": 32.54488349914551,
+        "qty": 0.3925,
+        "side": "sell",
+        "symbol": "TLT"
+      },
+      {
+        "delta_value": 24.124279944229162,
+        "qty": 0.4159,
+        "side": "sell",
+        "symbol": "FXY"
+      },
+      {
+        "delta_value": 21.856041925048878,
+        "qty": 0.4188,
+        "side": "sell",
+        "symbol": "BNO"
+      },
+      {
+        "delta_value": 21.719242058563278,
+        "qty": 0.7676,
+        "side": "sell",
+        "symbol": "DBA"
+      },
+      {
+        "delta_value": 20.241925000763,
+        "qty": 0.2337,
+        "side": "sell",
+        "symbol": "XLP"
+      },
+      {
+        "delta_value": 18.70179143066416,
+        "qty": 0.1696,
+        "side": "sell",
+        "symbol": "SHV"
+      },
+      {
+        "delta_value": 14.791219951629646,
+        "qty": 0.1585,
+        "side": "sell",
+        "symbol": "IEF"
+      },
+      {
+        "delta_value": 14.092099754333454,
+        "qty": 0.1389,
+        "side": "sell",
+        "symbol": "USMV"
+      },
+      {
+        "delta_value": 11.543592117309549,
+        "qty": 0.1045,
+        "side": "sell",
+        "symbol": "FXF"
+      },
+      {
+        "delta_value": 452.8963367675782,
+        "qty": 0.5882,
+        "side": "buy",
+        "symbol": "SPY"
+      },
+      {
+        "delta_value": 38.2070363433837,
+        "qty": 0.3586,
+        "side": "buy",
+        "symbol": "LQD"
+      },
+      {
+        "delta_value": 35.62389622039786,
+        "qty": 1.2773,
+        "side": "buy",
+        "symbol": "UUP"
+      },
+      {
+        "delta_value": 27.036514257812534,
+        "qty": 0.2072,
+        "side": "buy",
+        "symbol": "USO"
+      },
+      {
+        "delta_value": 25.08023757934564,
+        "qty": 0.2373,
+        "side": "buy",
+        "symbol": "MUB"
+      },
+      {
+        "delta_value": 16.517350483703655,
+        "qty": 0.1538,
+        "side": "buy",
+        "symbol": "TIP"
+      }
+    ],
+    "portfolio": {
+      "cash": 3.32,
+      "n_positions": 25,
+      "total_value": 30368.809221572876
+    }
+  },
+  "model_sha256": "319dd27c712d2a66cc67db60aedd08b7d0078258dc9004d421a89ba418ee0051",
+  "model_version": "shield_v1",
+  "publication_time_utc": "2026-08-19T19:31:32.468445Z",
+  "weights": {
+    "BNO": 0.04396001051580474,
+    "CPER": 0.04020372981907132,
+    "DBA": 0.04028018924157616,
+    "DBC": 0.04166568432415589,
+    "FXE": 0.03904207771751064,
+    "FXF": 0.03963194807361565,
+    "FXY": 0.03931592898453415,
+    "GDX": 0.039450253843900086,
+    "GLD": 0.03958851443022729,
+    "HYG": 0.04221849782041062,
+    "IEF": 0.039460411404519065,
+    "LQD": 0.039850324899624305,
+    "MUB": 0.03910821986182752,
+    "QQQ": 0.03943911652326834,
+    "SHV": 0.039325514422517936,
+    "SLV": 0.03997472343126965,
+    "SPY": 0.04026832246458455,
+    "TIP": 0.03944377455505653,
+    "TLT": 0.03988336498180667,
+    "USMV": 0.03962508498583765,
+    "USO": 0.039560587694096955,
+    "UUP": 0.03974488269795833,
+    "XLP": 0.03926292420622788,
+    "XLU": 0.04066303463829246,
+    "XLV": 0.03903287846230561
+  }
+}
