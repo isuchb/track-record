@@ -1,0 +1,165 @@
+{
+  "content_sha256": "5f4b6fd7eee5ddbeeed2bfff66a7987e778452151e1d056fb88f3979e9bc9c5d",
+  "date_utc": "2026-08-20",
+  "metadata": {
+    "dry_run": false,
+    "model_version": "shield_v1",
+    "orders": [
+      {
+        "delta_value": 318.2572971069336,
+        "qty": 0.4169,
+        "side": "sell",
+        "symbol": "SPY"
+      },
+      {
+        "delta_value": 56.37403899536129,
+        "qty": 0.1359,
+        "side": "sell",
+        "symbol": "GLD"
+      },
+      {
+        "delta_value": 40.86390233764653,
+        "qty": 0.4952,
+        "side": "sell",
+        "symbol": "TLT"
+      },
+      {
+        "delta_value": 38.15313559570307,
+        "qty": 0.2208,
+        "side": "sell",
+        "symbol": "XLV"
+      },
+      {
+        "delta_value": 31.221777571106003,
+        "qty": 0.5073,
+        "side": "sell",
+        "symbol": "SLV"
+      },
+      {
+        "delta_value": 25.469153583526595,
+        "qty": 0.2737,
+        "side": "sell",
+        "symbol": "IEF"
+      },
+      {
+        "delta_value": 24.468654959678737,
+        "qty": 0.7869,
+        "side": "sell",
+        "symbol": "DBC"
+      },
+      {
+        "delta_value": 24.380587500000097,
+        "qty": 0.1811,
+        "side": "sell",
+        "symbol": "USO"
+      },
+      {
+        "delta_value": 21.050652175140385,
+        "qty": 0.1913,
+        "side": "sell",
+        "symbol": "FXF"
+      },
+      {
+        "delta_value": 18.721296160125643,
+        "qty": 0.3498,
+        "side": "sell",
+        "symbol": "BNO"
+      },
+      {
+        "delta_value": 18.33438717269891,
+        "qty": 0.2145,
+        "side": "sell",
+        "symbol": "XLP"
+      },
+      {
+        "delta_value": 13.827417191314634,
+        "qty": 0.1283,
+        "side": "sell",
+        "symbol": "FXE"
+      },
+      {
+        "delta_value": 12.679992590331961,
+        "qty": 0.3224,
+        "side": "sell",
+        "symbol": "CPER"
+      },
+      {
+        "delta_value": 10.420462331771843,
+        "qty": 0.3675,
+        "side": "sell",
+        "symbol": "DBA"
+      },
+      {
+        "delta_value": 472.82082263183594,
+        "qty": 0.6652,
+        "side": "buy",
+        "symbol": "QQQ"
+      },
+      {
+        "delta_value": 80.05894270324711,
+        "qty": 0.794,
+        "side": "buy",
+        "symbol": "USMV"
+      },
+      {
+        "delta_value": 77.29116313476554,
+        "qty": 0.7008,
+        "side": "buy",
+        "symbol": "SHV"
+      },
+      {
+        "delta_value": 28.568849999999966,
+        "qty": 0.2692,
+        "side": "buy",
+        "symbol": "LQD"
+      },
+      {
+        "delta_value": 27.108091712951758,
+        "qty": 0.4703,
+        "side": "buy",
+        "symbol": "FXY"
+      },
+      {
+        "delta_value": 13.114271158599838,
+        "qty": 0.1243,
+        "side": "buy",
+        "symbol": "MUB"
+      }
+    ],
+    "portfolio": {
+      "cash": 16.73,
+      "n_positions": 25,
+      "total_value": 30010.91799972534
+    }
+  },
+  "model_sha256": "319dd27c712d2a66cc67db60aedd08b7d0078258dc9004d421a89ba418ee0051",
+  "model_version": "shield_v1",
+  "publication_time_utc": "2026-08-20T19:31:29.522226Z",
+  "weights": {
+    "BNO": 0.043960010830186205,
+    "CPER": 0.04020373010658962,
+    "DBA": 0.04028018952964127,
+    "DBC": 0.04166568462212941,
+    "FXE": 0.03904207799672135,
+    "FXF": 0.03963194835704483,
+    "FXY": 0.03931592926570331,
+    "GDX": 0.03945025412602988,
+    "GLD": 0.03958851471334585,
+    "HYG": 0.0422184981223376,
+    "IEF": 0.0394604116867215,
+    "LQD": 0.03985032518461522,
+    "MUB": 0.039108220141511246,
+    "QQQ": 0.03943911680531848,
+    "SHV": 0.03932551470375565,
+    "SLV": 0.039974723717150204,
+    "SPY": 0.040268322752564784,
+    "TIP": 0.03944377245329565,
+    "TLT": 0.039883365267033864,
+    "USMV": 0.039625082885373426,
+    "USO": 0.0395605879770158,
+    "UUP": 0.03974488059835084,
+    "XLP": 0.03926292448701798,
+    "XLU": 0.040663034929095496,
+    "XLV": 0.03903287874145053
+  }
+}
